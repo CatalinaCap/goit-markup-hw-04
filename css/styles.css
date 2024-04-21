@@ -10,15 +10,18 @@
   --secondary-font: 'raleway', Sans-serif;
   --background-index: #2f303a;
 }
+* {
+  margin: 0;
+  padding: 0;
+ 
+}
 /*Header section*/
 body {
   font-family: var(--primary-font);
   color: var(--white);
+  
 }
-.header__section {
-  background-color: var(--white);
-  margin-bottom: 94px;
-}
+
 .header_logo {
   margin-top: 15px;
 }
@@ -45,6 +48,7 @@ body {
   display: flex;
   gap: 50px;
   margin-bottom: 50px;
+  padding-top: 20px;
 }
 .link {
   text-decoration: none;
@@ -88,11 +92,14 @@ body {
 .buttons {
   font-family: var(--primary-font);
   font-size: 16px;
-  font-weight: 700;
-  line-height: 1.6;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: 0.03em;
+  text-align: center;
   color: var(--light-black);
   background-color: var(--special-gray);
   border: none;
+  border-radius: 4px;
   cursor: pointer;
 }
 .section {
@@ -100,9 +107,10 @@ body {
   justify-content: center;
   gap: 8px;
 }
-.buttons:hover {
+.buttons:hover, .buttons:focus {
   color: var(--white);
   background-color: var(--blue);
+  text-shadow: 10px 10px 10px var(--black);
 }
 
 /*List-categories*/
@@ -136,6 +144,9 @@ body {
   flex-wrap: wrap;
   padding-left: 0px;
 }
+.cards:hover {
+  text-shadow: 10px 10px 15px var(--black);
+}
 .area {
   border-bottom: 1px solid rgba(238, 238, 238, 1);
 }
@@ -168,7 +179,15 @@ a {
 }
 /*Index html style*/
 /*Header logo*/
-
+.header__section {
+  height: 80px;
+}
+.header_phone {
+  margin-right: -50px;
+}
+.header_envelope {
+  margin-right: -45px;
+}
 .index_logo {
   color: var(--black);
   font-family: var(--secondary-font);
@@ -216,18 +235,62 @@ p {
   margin-top: 0%;
 }
 .main_title {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   background-color: var(--background-index);
-  text-align: center;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.2)
+    ),
+    url(../images/img-bg.jpg);
+  background-size: 1600px 600px;
+  background-repeat: no-repeat;
+  border-radius: 0%;
+  background-position: 50% 50%;
 }
+
 .button_index:hover,
 .button_index:focus {
   background-color: var(--blue);
   color: var(--white);
 }
+.button_index {
+  font-family: var(--primary-font);
+  vertical-align: middle;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 19px;
+  padding-left: 20px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0.06em;
+  background-color: var(--blue);
+  color: var(--white);
+  margin-top: 100px;
+}
+h1 {
+  margin-top: 150px;
+  font-size: 44px;
+  letter-spacing: 0.06em;
+  line-height: 60px;
+  text-align: center;
+  font-family: var(--primary-font);
+  font-weight: 900;
+}
+.icons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 94px;
+  margin-bottom: 30px;
+  gap: 30px;
+}
 .section_div {
   color: var(--light-black);
   font-family: var(--primary-font);
   font-weight: 700;
+  margin-top: -60px;
 }
 .paragraph {
   color: var(--gray);
@@ -241,20 +304,40 @@ p {
   text-align: center;
 }
 /*Last Part-Team*/
+.shadow_cards {
+  text-shadow: box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
+
+box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+
+box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+background-color: white;
+
+}
+.header_insta {
+  background-color: rgba(33, 150, 243, 1);
+}
+.social_media {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 16px;
+}
 .team_member {
   font-size: 16px;
   font-weight: 700;
   color: var(--light-black);
+  text-align: center;
 }
 .member_profession {
   font-size: 16px;
   color: var(--gray);
+  text-align: center;
 }
 h2 {
   color: var(--light-black);
   font-size: 36px;
   font-family: var(--primary-font);
   text-align: center;
+  margin-bottom: -100px;
 }
 /*Footer */
 .first_part_logo {
@@ -275,16 +358,19 @@ h2 {
   color: var(--blue);
 }
 /* Tema 3/ Flexbox, margins, padding */
+
 .container {
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
+
 /* Index html tema 3*/
 .header_navigation {
   display: flex;
   justify-content: space-between;
   gap: 40px;
+  padding-top: 20px;
 }
 .index_logo {
   margin-top: 15px;
@@ -299,17 +385,12 @@ h2 {
   margin-top: 40px;
   margin-bottom: 40px;
 }
-.main_title {
-  margin: 0%;
-}
-h1 {
-  font-size: 44px;
-  letter-spacing: 0.06em;
-  line-height: 60px;
-}
+
 .button_index {
   font-size: 16px;
   line-height: 30px;
+  display: flex;
+  align-self: center;
 }
 .details_paragraph {
   display: flex;
@@ -317,10 +398,14 @@ h1 {
   margin-top: 94px;
   margin-bottom: 94px;
 }
+.p_section {
+  margin-left: -35px;
+}
 h2 {
-  margin-bottom: 50px;
+  /* margin-bottom: 50px;*/
   font-size: 36px;
   letter-spacing: 0.03em;
+  margin-top: 94px;
 }
 .pictures_second_part {
   display: flex;
@@ -331,5 +416,111 @@ h2 {
   display: flex;
   justify-content: space-between;
   gap: 30px;
+  margin-top: 186px;
   margin-bottom: 94px;
+  width: 1170px;
+  height: 428px;
+  padding-left: 0px;
+}
+.last_part_index {
+  background-color: rgba(rgb(191, 191, 197));
+  height: 700px;
+  max-width: 1600px;
+}
+.customers_loyalty {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -70px;
+ 
+}
+.end_index {
+  margin-bottom: 150px;
+}
+.customers_end {
+  height: 184px;
+  margin-bottom: 200px;
+}
+.brand_customers {
+  box-sizing: border-box;
+  width: 170px;
+  height: 92px;
+  border: 1px solid rgba(175, 177, 184, 1);
+}
+.reg_customers:hover, 
+.reg_customers:focus {
+
+ fill: var(--white);
+  background-color: var(--blue);
+}
+
+.reg_customers{
+ /* padding-top: 20px;
+  padding-left: 45px;*/
+
+}
+.header_insta:hover, .header_insta:focus {
+  fill: var(--white);
+  background-color: var(--blue);
+}
+.header_twitter:hover, .header_twitter:focus {
+ 
+  fill: var(--white);
+  background-color: var(--blue);
+}
+.header_facebook:hover, .header_facebook:focus {
+  
+  fill: var(--white);
+  background-color: var(--blue);
+}
+.header_linkedin:hover, .header_linkedin:focus {
+ 
+  fill: var(--white);
+  background-color: var(--blue);
+}
+.header_insta {
+  background-color: var(--white);
+}
+/*ARANJAREA SECTIUNII "FIND US ON SOCIAL MEDIA" IN FOOTER- NU STIU CE FAC GRESIT
+.container_footer .footer_social_media {
+display: flex;
+flex-direction: row;
+gap: 70px;
+
+}*/
+
+.sm_footer:hover, .sm_footer:focus {
+  fill: var(--white);
+  background-color: var(--blue);
+}
+.reg_customers {
+  fill: rgba(175, 177, 184, 1);
+
+}
+.social_media {
+  fill: rgba(175, 177, 184, 1) ;
+}
+.sm_footer {
+  fill: rgba(175, 177, 184, 1) ;
+}
+.title_footer {
+font-family: Roboto;
+font-size: 14px;
+font-weight: 700;
+line-height: 16.41px;
+letter-spacing: 0.03em;
+text-align: left;
+}
+.header_envelope {
+  fill: rgba(175, 177, 184, 1);
+}
+.header_phone {
+  fill: rgba(175, 177, 184, 1);
+}
+.header_phone:hover, .header_phone:focus {
+  fill: var(--white);
+  background-color: var(--blue);
+}
+.header_envelope:hover, .header_envelope:focus {
+  fill: var(--white);
+  background-color: var(--blue);
 }
